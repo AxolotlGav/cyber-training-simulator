@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Textures/grid.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 1 )
+uv1_triplanar = true
+
+[sub_resource type="CapsuleShape" id=5]
+radius = 0.4
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.273, 0 )
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+visible = false
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+shape = SubResource( 5 )
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02436, 0 )
+
+[node name="Camera" type="Camera" parent="Head"]
+current = true
+
+[node name="interact" type="RayCast" parent="Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.897945 )
+enabled = true
+cast_to = Vector3( 0, 0, -4.468 )
+collision_mask = 2147483648
+collide_with_areas = true
+collide_with_bodies = false
+debug_shape_custom_color = Color( 1, 1, 0, 1 )
+
+[node name="shoot" type="RayCast" parent="Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.898 )
+enabled = true
+cast_to = Vector3( 0, 0, -420 )
+collide_with_areas = true
+debug_shape_custom_color = Color( 1, 0, 0, 1 )

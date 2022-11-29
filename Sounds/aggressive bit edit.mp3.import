@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/aggressive bit edit.mp3-f3c1a2f029fe05c8af3f578f4ef898c3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/aggressive bit edit.mp3"
+dest_files=[ "res://.import/aggressive bit edit.mp3-f3c1a2f029fe05c8af3f578f4ef898c3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

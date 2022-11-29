@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/boowomp.ogg-b5cb871faff9764bc5c78dff654ac76c.oggstr"
+
+[deps]
+
+source_file="res://Sounds/placeholder/boowomp.ogg"
+dest_files=[ "res://.import/boowomp.ogg-b5cb871faff9764bc5c78dff654ac76c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

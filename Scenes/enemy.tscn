@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Textures/sprite_0.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/enemy.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=5]
+radius = 0.77101
+height = 0.278027
+
+[node name="enemy" type="KinematicBody"]
+collision_layer = 8
+collision_mask = 15
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 1.825, 0 )
+shape = SubResource( 5 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.584, 0, 0, 0, 0.584, 0, 0, 0, 1, 0, 1.82518, 0 )
+billboard = 2
+texture = ExtResource( 1 )

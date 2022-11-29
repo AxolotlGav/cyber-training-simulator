@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/levelbuilding/prototype_dark_03_staticbody.tscn" type="PackedScene" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="level" type="Spatial" parent="."]
+
+[node name="PrototypeCube" parent="level" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 0.126508, 0, 0, 0, 1.78044, -1, 0, 0 )
+
+[node name="PrototypeCube2" parent="level" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 0.127, 0, 0, 0, 1.78, -1, 6.54051, 0 )
+
+[node name="PrototypeCube3" parent="level" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -1.04942e-08, -3.3649, 0, 0.127, -7.78063e-08, -1, 6.54051, 0 )
+
+[node name="PrototypeCube4" parent="level" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, -0.127, 7.78063e-08, 0, -1.04942e-08, -3.3649, 1.75758, -9.75693e-09, 5.97756e-15, -1, 6.54051, 0 )
+
+[node name="PrototypeCube5" parent="level" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, -0.127, 7.78063e-08, 0, -1.04942e-08, -3.3649, 1.75758, -9.75693e-09, 5.97756e-15, 1.24569, 6.54051, 0 )
+
+[node name="PrototypeCube6" parent="level" instance=ExtResource( 2 )]
+transform = Transform( 3.76597, 0, 0, 0, 0.126508, 0, 0, 0, 5.69193, -3.69365, 0, 3.53727 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.110649, 1.22644, 1.02672 )

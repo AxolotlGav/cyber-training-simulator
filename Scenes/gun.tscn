@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Models/shotgun.obj" type="ArrayMesh" id=1]
+
+[node name="gun" type="MeshInstance"]
+transform = Transform( -5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 0, -0.138, -0.226 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("../..")
